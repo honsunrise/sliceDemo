@@ -30,8 +30,10 @@ public class DemoController {
          * Create a random OtherModel list
          */
         List<OtherModel> otherModels = new ArrayList<>(10);
-        for (OtherModel otherModel : otherModels) {
+        for (int i = 0; i < 10; i++) {
+            OtherModel otherModel = new OtherModel();
             otherModel.setField(String.valueOf(Math.random()));
+            otherModels.add(otherModel);
         }
 
         /**
