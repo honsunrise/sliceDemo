@@ -1,5 +1,7 @@
 package demoslice.domain;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
@@ -7,6 +9,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document
 public class OtherModel {
+    @Id
+    private ObjectId id;
+
     private String field;
 
     public String getField() {

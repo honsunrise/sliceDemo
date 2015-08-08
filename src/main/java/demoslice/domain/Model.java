@@ -1,10 +1,12 @@
 package demoslice.domain;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by iCoderc on 2015/8/8.
@@ -12,15 +14,15 @@ import java.util.List;
 @Document
 public class Model {
     @Id
-    private String id;
+    private ObjectId id;
     @DBRef
     private List<OtherModel> otherModels;
 
-    public String getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
